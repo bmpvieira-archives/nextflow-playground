@@ -1,0 +1,49 @@
+Mar-24 22:49:12.683 [main] DEBUG nextflow.cli.Launcher - $> /Users/bmpvieira/nextflow script.nextflow
+Mar-24 22:49:12.738 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 0.17.3
+Mar-24 22:49:12.739 [main] INFO  nextflow.cli.CmdRun - Launching script.nextflow
+Mar-24 22:49:13.138 [main] DEBUG nextflow.Session - Session uuid: 42aefdea-759b-4b51-b6af-9b9e406813e7
+Mar-24 22:49:13.141 [main] DEBUG nextflow.Session - Executor pool size: 9
+Mar-24 22:49:13.177 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 0.17.3 build 3495
+  Modified: 18-02-2016 11:00 UTC (11:00 BST)
+  System: Mac OS X 10.11.4
+  Runtime: Groovy 2.4.5 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_72-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 6655@Brunos-MacBook-Pro.local [192.168.0.104]
+
+Mar-24 22:49:13.183 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/bmpvieira/nextflow-playground/bin
+Mar-24 22:49:13.184 [main] DEBUG nextflow.Session - Session start invoked
+Mar-24 22:49:13.193 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Mar-24 22:49:13.193 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Mar-24 22:49:13.297 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-24 22:49:13.385 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-24 22:49:13.385 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-24 22:49:13.390 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-24 22:49:13.392 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+Mar-24 22:49:13.399 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'local' > capacity: 9; pollInterval: 100ms; dumpInterval: 5m 
+Mar-24 22:49:13.407 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: TaskPollingMonitor
+Mar-24 22:49:13.408 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-24 22:49:13.413 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+Mar-24 22:49:13.469 [main] DEBUG nextflow.Session - >>> barrier register (process: splitSequences)
+Mar-24 22:49:13.492 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > splitSequences -- maxForks: 9
+Mar-24 22:49:13.507 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-24 22:49:13.508 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-24 22:49:13.508 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-24 22:49:13.508 [main] DEBUG nextflow.Session - >>> barrier register (process: reverse)
+Mar-24 22:49:13.515 [main] DEBUG n.processor.ParallelTaskProcessor - Creating operator > reverse -- maxForks: 9
+Mar-24 22:49:13.524 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Mar-24 22:49:13.524 [main] DEBUG nextflow.Session - Session await
+Mar-24 22:49:13.648 [Actor Thread 2] INFO  nextflow.processor.TaskDispatcher - [67/062a5e] Submitted process > splitSequences (1)
+Mar-24 22:49:13.731 [Actor Thread 3] DEBUG nextflow.processor.TaskProcessor - <splitSequences> Sending poison pills and terminating process
+Mar-24 22:49:13.733 [Actor Thread 2] DEBUG n.processor.ParallelTaskProcessor - <reverse> Poison pill arrived
+Mar-24 22:49:13.733 [Actor Thread 3] DEBUG nextflow.Session - <<< barrier arrive (process: splitSequences)
+Mar-24 22:49:13.735 [Actor Thread 4] DEBUG nextflow.processor.StateObj - <reverse> State before poison: StateObj[submitted: 1; completed: 0; poisoned: false; allScalar: false]
+Mar-24 22:49:13.735 [Actor Thread 5] DEBUG n.processor.ParallelTaskProcessor - <splitSequences> After stop
+Mar-24 22:49:13.741 [Actor Thread 1] INFO  nextflow.processor.TaskDispatcher - [45/cfca28] Submitted process > reverse (1)
+Mar-24 22:49:13.781 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - <reverse> Sending poison pills and terminating process
+Mar-24 22:49:13.781 [Actor Thread 4] DEBUG nextflow.Session - <<< barrier arrive (process: reverse)
+Mar-24 22:49:13.781 [main] DEBUG nextflow.Session - Session await > processes completed
+Mar-24 22:49:13.781 [Actor Thread 2] DEBUG n.processor.ParallelTaskProcessor - <reverse> After stop
+Mar-24 22:49:13.880 [Thread-2] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+Mar-24 22:49:13.881 [main] DEBUG nextflow.Session - Session await > done
+Mar-24 22:49:13.893 [main] DEBUG nextflow.Session - Session destroyed
